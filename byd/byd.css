@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --wd-course: 71px;
+    --ht-course: 28px;
+    --mgwd-course: 3px;
+    --mght-course: 3px;
+
+    --wd-tri: var(--wd-course)*2+3*var(--mgwd-course);
+    --ht-tri: var(--ht-course)*2+3*var(--mght-course);
+
+}
+
+body {
+    display: flex;
+    font-size: 16px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    width: 1280px; 
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 600px 20px;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 100px 350px 1fr;
+    grid-template-rows: 1fr;
+    width: 1280px;
+    background-color: black;
+    overflow: hidden;
+    margin: 0px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.ctr-main {
+    display: grid;
+    grid-template-columns: 330px 930px;
+    grid-template-rows: 1fr;
+    background-color: white;
+    gap: 20px;
+    padding: 10px;
+}
+
+.ctr-intro {
+}
+
+
+.ctr-controls {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.ctr-subjects {
+    background-color: #e0e0e0;
+    padding:5px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+}
+
+.ctr-progs {
+    background-color: #c0c0c0;
+    padding:20px;
+    border-radius: 5px;
+    display:flex;
+    gap:20px;
+    flex-direction: column;
+}
+
+.ctr-majors {
+    background-color: #e0e0e0;
+    padding:5px;
+    border-radius: 5px;
+    display:grid;
+    gap:0px;
+    grid-template-rows: 30px 1fr 1fr 40px;
+    font-weight: bold;
+    font-family: 'consolas';
+}
+
+.ctr-major-row {
+    background-color: #e0e0e0;
+    padding:5px;
+    border-radius: 0px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+}
+
+.ctr-major-label {
+    padding:5px;
+}
+.ctr-major-text {
+    padding-top:5px;
+    font-weight: normal;
+    font-size: 8pt;
+}
+
+.ctr-major-text-ok {
+    padding-top:5px;
+    padding-left:5px;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+
+.ctr-pts {
+    background-color: #c0c0c0;
+    padding:5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'consolas';
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ctr-pts-buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ctr-pts-results {
+    display:grid;
+    gap:0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.pts-results-item {
+    padding:5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: center;
+}
+
+.btn-control {
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    background-color:#f0f0f0;
+}
+
+.btn-control:hover {
+    color: teal;
+    background-color:#d0f0f0;
+}
+
+
+.ctr-dd-subjects {
+    display:flex;
+    justify-content: center;
+    padding: 5px;
+    gap:20px;
+}
+
+.dd-subjects {
+    height: 30px;
+    font-family: 'consolas';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-subject {
+    padding: 4px;
+    margin: 0px 4px 0px 4px;
+
+    border-color:black;
+    border-style: none;
+    border-width: 4px;
+    text-align: center;
+    font-family: 'consolas';
+    font-weight: bold;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+}
+
+.btn-subject-selected {
+    border-style: solid;
+}
+
+
+
+
+.ctr-all-years {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 180px 180px;
+    background-color: white;
+}
+
+.ctr-year {
+    display: grid;
+    grid-template-columns: 900px;
+    grid-template-rows: 72x 72px;
+    gap: 0px;
+    background-color:white;
+    overflow: hidden;
+    padding-left: 10px;
+    padding: 5px;
+}
+
+.ctr-tri {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background-color:white;
+    overflow: hidden;
+}
+
+.tri-name {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    background-color:black;
+    overflow: hidden;
+    width: 1280px;
+    font-style: italic;
+    font-size: 10pt;
+    color: white;
+}
+.footer a {
+    color: white;
+}
+.footer a:hover {
+    color:lightgrey;
+}
+.stack {
+    border-radius: 10px;
+    border-color: none;
+    background-color: grey;
+    display: grid;
+    height: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding: 5px;
+}
+
+.subject-stack {
+    border-radius: 0px;
+    border-color: none;
+/*    background-color: gray;*/
+    display: grid;
+    height: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    padding: 5px;
+}
+
+
+.unused {
+    background-color: lightgrey;
+}
+
+
+
+/* trimesters */
+
+.course {
+    width: var(--wd-course);
+    height: var(--ht-course);
+    max-width: var(--wd-course);
+    max-height: var(--ht-course);
+    
+    border-radius: 5px;
+    border-color: #404040;
+    border-width: 1px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'consolas';
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: var(--mght-course);
+    margin-bottom: var(--mght-course);
+    margin-left: var(--mgwd-course);
+    margin-right: var(--mgwd-course);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan; /* default color */
+
+}
+
+.c15pts{
+    border-style: none;
+}
+
+.c20pts{
+    border-style: dashed;
+}
+
+.course:hover{
+    cursor: grab;
+}
+
+/* Styles for main index page */
+
+#ctr-main-index{
+    font-family: calibri;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-index{
+    padding: 2em;
+    max-width: 800px;
+}
+
+.main-index li{
+    margin: 1em 0
+}
+.main-index p{
+    margin: 1em 0
+}
+
+#btn-main-index{
+    padding: 5pt 50pt;
+    margin-bottom: 20pt;
+}

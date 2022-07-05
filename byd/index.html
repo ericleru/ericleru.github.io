@@ -1,9 +1,66 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Eric Le Ru, eric.leru@vuw.ac.nz">
+    <title>Build Your Degree</title>
+    <link rel="stylesheet" href="byd.css">
+</head>
+
+<body>
+    <div class="container" id="ctr-main-index">
+        <div class="header">
+            <img src="logo-white-full.svg" height=100% />
+            <div></div>
+            <h2 style="color: white;">Build your degree</h2>
+        </div>
+        <div class="main-index">
+            <p>
+                This tool was developed by the <a href="https://www.wgtn.ac.nz/scps" target="window">School of Chemical and Physical Sciences</a> (SCPS)  to facilitate degree planning for Physics students. It provides a
+                graphical interface for a typical BSc structure (i.e.
+                over 3 years, 2 trimesters each year). Courses pre-requisites can be visualised and major requirements
+                for many science major can be checked.
+                Examples of full programmes (such as double majors) including Physics can be visualised easily.
+            </p>
+            <p>
+                It was not originally intended to be shared, but as it may be useful to others, it is shared here as-is.
+            </p>
+
+            <p> <b>This not an official source of information for courses. Users should always refer to the <a target="window" href="https://www.wgtn.ac.nz/">VUW website</a>
+                    for the latest correct information on courses.</b>
+            </p>
+            <p>Some important things to note:
+            </p>
+
+            <ul>
+                <li> This tool has not been designed as a modern multiplatform/responsive layout. Its probably works
+                    only on modern browsers (Firefox and Chrome),
+                    and only on devices with sufficiently large screens. There is likely to be a few layout hiccups here
+                    and there. The focus is on functionality, not aesthetics.
+                </li>
+                <li> The list of courses is based on courses offered in 2020/2021 during T1 or T2 (no T3 courses) and
+                    only include recent changes related to physics. A few 30pts courses running over both T1/T2 are
+                    shown as T1 only
+                    courses.
+                    Courses over the mid-trimester break are shown as T1 only courses. Some courses may be missing...
+                </li>
+                <li> Courses from the faculty of Law are not included (there are too many courses with the same label
+                    for the current layout).</li>
+                <li>Major requirements are only available for a few Science majors. Many of them have not been tested
+                    carefully, so always double check with the <a target="window" href="https://www.wgtn.ac.nz/explore/degrees/science/requirements">official information on the VUW website</a>.
+                </li>
+
+            </ul>
+        </div>
+        <button class="btn-control" id="btn-main-index" onclick="location.href='byd.html';">I understand, let me try it...</button>
+        <div class="footer">
+            Comments and bug report: <a href="mailto:eric.leru@vuw.ac.nz">eric.leru@vuw.ac.nz</a>
+        </div>
+    </div>
+
 
 </body>
+
 </html>

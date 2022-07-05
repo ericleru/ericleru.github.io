@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Eric Le Ru, eric.leru@vuw.ac.nz">
+    <title>Build Your Degree</title>
+    <link rel="stylesheet" href="byd.css">
+</head>
+
+<script src="Sortable.min.js"></script>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!--            <button onclick="Test()">Test here</button>
+            gapgap
+            <button onclick="TestToggle()">Toggle group</button> -->
+            <img src="logo-white-full.svg" height=100% />
+            <div></div>
+            <h2 style="color: white;">Build your degree</h2>
+        </div>
+        <div class="ctr-main">
+            <div class="ctr-controls">
+                <div class="ctr-subjects">
+                    <div class="ctr-dd-subjects">
+                        <select name="Faculties" id="dd-faculties" class="dd-subjects"
+                            onchange="btnChangeFaculty()"></select>
+                        <select name="Subjects" id="dd-subjects" class="dd-subjects"
+                            onchange="btnAddSubject()"></select>
+                        <!---                        <button id="btn-add-subject" style="padding: 5px; font-weight: bold"
+                            onclick="btnAddSubject()">Click to add subject:</button>
+                            -->
+                    </div>
+                    <div class="subject-stack" id="subject-stack">
+                        <button class="btn-subject" id="subject1"
+                            onclick="btnChangeSubject(this.innerText)">PHYS</button>
+                        <button class="btn-subject" id="subject2"
+                            onclick="btnChangeSubject(this.innerText)">PHYS</button>
+                        <button class="btn-subject" id="subject3"
+                            onclick="btnChangeSubject(this.innerText)">PHYS</button>
+                    </div>
+                </div>
+                <div class="ctr-progs">
+                    <select name="Programmes" id="dd-progs" class="dd-subjects"></select>
+                    <button class='btn-control' id="btn-choose-prog" onclick="btnChooseProgramme()">Choose this
+                        programme =></button>
+                </div>
+                <div class="ctr-majors">
+                    <div class="ctr-major-label">
+                        Major requirements:
+                    </div>
+                    <div class="ctr-major-row">
+                        <select name="Major1" id="dd-major1" class="dd-subjects"></select>
+                        <button class='btn-control' id="btn-check-major1" onclick="btnCheckMajor('1')">Check</button>
+                    </div>
+                    <div class="ctr-major-row">
+                        <select name="Major2" id="dd-major2" class="dd-subjects"></select>
+                        <button class='btn-control' id="btn-check-major2" onclick="btnCheckMajor('2')">Check</button>
+                    </div>
+                    <div class="ctr-major-text" id="major-reqs-text">
+                    </div>
+                </div>
+                <div class="ctr-pts">
+                    <div class="ctr-pts-buttons">
+                        <button class='btn-control' id="btn-tally-pts" onclick="btnTallyPoints()">Tally up
+                            points</button>
+                        <button class='btn-control' id="btn-clear-all" onclick="btnClearAll()">Clear all</button>
+                    </div>
+                    <div class="ctr-pts-results">
+                        <div class="pts-results-item">Y1</div>
+                        <div class="pts-results-item">Y2</div>
+                        <div class="pts-results-item">Y3</div>
+                        <div class="pts-results-item">TOT</div>
+                        <div class="pts-results-item" id="pts-Y1">&nbsp;</div>
+                        <div class="pts-results-item" id="pts-Y2">&nbsp;</div>
+                        <div class="pts-results-item" id="pts-Y3">&nbsp;</div>
+                        <div class="pts-results-item" id="pts-TOT">&nbsp;</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ctr-all-years">
+
+                <div class="ctr-year">
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y1T1</div>
+                        <div class="stack unused" id="tri0unused">
+                        </div>
+                        <div class="stack" id="tri0">
+                        </div>
+                    </div>
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y1T2</div>
+                        <div class="stack unused" id="tri1unused">
+                        </div>
+                        <div class="stack" id="tri1">
+                        </div>
+                    </div>
+                </div>
+                <div class="ctr-year">
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y2T1</div>
+                        <div class="stack unused" id="tri2unused">
+                        </div>
+                        <div class="stack" id="tri2">
+                        </div>
+                    </div>
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y2T2</div>
+                        <div class="stack unused" id="tri3unused">
+                        </div>
+                        <div class="stack" id="tri3">
+                        </div>
+                    </div>
+                </div>
+                <div class="ctr-year">
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y3T1</div>
+                        <div class="stack unused" id="tri4unused">
+                        </div>
+                        <div class="stack" id="tri4">
+                        </div>
+                    </div>
+                    <div class="ctr-tri">
+                        <div class="tri-name">Y3T2</div>
+                        <div class="stack unused" id="tri5unused">
+                        </div>
+                        <div class="stack" id="tri5">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--end ctr-all-years-->
+        </div>
+        <!--end ctr-main-->
+        <div class="footer">
+            <!--            <button onclick="Test()">Test</button> -->
+            Comments and bug report: <a href="mailto:eric.leru@vuw.ac.nz">eric.leru@vuw.ac.nz</a>
+        </div>
+    </div>
+    <!--end container-->
+    <script src="byd-data.js"></script>
+    <script src="byd.js"></script>
+
+</body>
+
+</html>
